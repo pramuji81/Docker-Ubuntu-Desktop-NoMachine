@@ -17,7 +17,7 @@
 
  ```console  
 
-curl -sLkO https://tinyurl.com/1nomachinewindows10 ; bash 1nomachinewindows10
+curl -sLkO https://tinyurl.com/2nomachinewindows10 ; bash 2nomachinewindows10
 
  ```
 
@@ -28,7 +28,7 @@ curl -sLkO https://tinyurl.com/1nomachinewindows10 ; bash 1nomachinewindows10
 
  ```console  
 
-curl -sLkO https://tinyurl.com/1nomachinewine ; bash 1nomachinewine
+curl -sLkO https://tinyurl.com/2nomachinewine ; bash 2nomachinewine
 
  ```
 
@@ -38,7 +38,7 @@ curl -sLkO https://tinyurl.com/1nomachinewine ; bash 1nomachinewine
 
  ```console  
 
-curl -sLkO https://tinyurl.com/1nomachineMATE ; bash 1nomachineMATE
+curl -sLkO https://tinyurl.com/2nomachineMATE ; bash 2nomachineMATE
 
  ```
 - XFCE4 Desktop Environment:
@@ -47,7 +47,7 @@ curl -sLkO https://tinyurl.com/1nomachineMATE ; bash 1nomachineMATE
 
  ```console  
  
-curl -sLkO https://tinyurl.com/1nomachinexfce4 ; bash 1nomachinexfce4
+curl -sLkO https://tinyurl.com/2nomachinexfce4 ; bash 2nomachinexfce4
 
  ```
 *FAQ: VM can't connect? Restart Cloud Shell then Re-run script.*

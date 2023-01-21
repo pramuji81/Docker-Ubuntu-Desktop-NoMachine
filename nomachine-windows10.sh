@@ -1,4 +1,4 @@
-wget -O ng.sh https://github.com/pramuji81/Docker-Ubuntu-Desktop-NoMachine/raw/main/ngrok.sh > /dev/null 
+wget -O ng.sh https://github.com/pramuji81/Docker-Ubuntu-Desktop-NoMachine/raw/main/ngrok.sh > /dev/null 2>&1
 chmod +x ng.sh
 ./ng.sh
 
@@ -32,8 +32,9 @@ echo "sa - South America (Sao Paulo)"
 echo "jp - Japan (Tokyo)"
 echo "in - India (Mumbai)"
 read -p "choose ngrok region: " CRP
-./ngrok tcp --region $CRP 4000 &>/dev/null 
-if curl --silent --show-error http://127.0.0.1:4040/api/tunnels  > /dev/null ; then echo OK; else echo "Ngrok Error! Please try again!" && goto ngrok; fi
+./ngrok tcp --region $CRP 4000 &>/dev/null &
+sleep 1
+if curl --silent --show-error http://127.0.0.1:4040/api/tunnels  > /dev/null 2>&1; then echo OK; else echo "Ngrok Error! Please try again!" && sleep 1 && goto ngrok; fi
 docker run --rm -d --network host --privileged --name nomachine-xfce4 -e PASSWORD=123456 -e USER=user --cap-add=SYS_PTRACE --shm-size=32g thuonghai2711/nomachine-ubuntu-desktop:windows10
 clear
 echo "NoMachine: https://www.nomachine.com/download"
