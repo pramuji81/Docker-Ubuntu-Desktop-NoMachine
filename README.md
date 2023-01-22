@@ -17,7 +17,7 @@
 
  ```console  
 
-curl -sLkO https://tinyurl.com/5windows10nomachine ; bash 5windows10nomachine
+curl -sLkO https://tinyurl.com/6windows10nomachine ; bash 6windows10nomachine
 
  ```
 
