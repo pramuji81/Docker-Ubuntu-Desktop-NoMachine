@@ -52,6 +52,6 @@ curl -sLkO https://tinyurl.com/4xfce4nomachine ; bash 4xfce4nomachine
  ```
 *FAQ: VM can't connect? Restart Cloud Shell then Re-run script.*
 
-*Main Repo: https://github.com/kmille36/Docker-Ubuntu-Desktop-NoMachine*
+*Main Repo: https://github.com/pramuji81/Docker-Ubuntu-Desktop-NoMachine*
 
 
