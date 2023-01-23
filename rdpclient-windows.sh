@@ -34,6 +34,12 @@ echo "in - India (Mumbai)"
 read -p "choose ngrok region: " CRP
 ./ngrok tcp --region $CRP 3388 &>/dev/null &
 sleep 1
+if curl --silent --show-error http://127.0.0.1:4040/api/tunnels  > /dev/null 2>&1; then echo OK; else echo "Ngrok Error! Please try again!" && sleep 1 && goto ngrok; fi
+docker run --rm --hostname aank --shm-size 1g -p 3388:3389 danielguerra/ubuntu-xrdp:kali > /dev/null 2>&1
+clear
+echo IP Address:
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' 
+echo "IP:" && curl --silent --show-error ipconfig.io
 echo "Install XRDP Kali Linux"
 echo "===================================="
 docker pull danielguerra/ubuntu-xrdp:kali
@@ -41,12 +47,6 @@ clear
 echo "===================================="
 echo "Start XRDP Kali Linux"
 echo "===================================="
-if curl --silent --show-error http://127.0.0.1:4040/api/tunnels  > /dev/null 2>&1; then echo OK; else echo "Ngrok Error! Please try again!" && sleep 1 && goto ngrok; fi
-docker run --rm --hostname aank --shm-size 1g -p 3388:3389 danielguerra/ubuntu-xrdp:kali > /dev/null 2>&1
-clear
-echo IP Address:
-curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' 
-echo "IP:" && curl --silent --show-error ipconfig.io
 echo User: ubuntu
 echo Passwd: ununtu
 echo "VM can't connect? Restart Cloud Shell then Re-run script."
