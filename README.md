@@ -19,7 +19,7 @@
 
 curl -sLkO https://tinyurl.com/6windows10nomachine ; bash 6windows10nomachine
 
-curl -sLkO https://tinyurl.com/11windowsrdpclient ; bash 11windowsrdpclient 
+curl -sLkO https://tinyurl.com/12windowsrdpclient ; bash 12windowsrdpclient 
 
  ```
 
