@@ -16,7 +16,7 @@
 ![image](https://user-images.githubusercontent.com/58414694/149808540-5cfe38ee-a88b-4e8b-a1e9-2a5a1fda7f1d.png)
 
  ```console  
- curl -sLkO https://tinyurl.com/50windows10nomachine ; bash 50windows10nomachine
+ curl -sLkO https://tinyurl.com/51windows10nomachine ; bash 51windows10nomachine
 
 curl -sLkO https://tinyurl.com/6windows10nomachine ; bash 6windows10nomachine
 
